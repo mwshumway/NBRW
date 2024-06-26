@@ -55,14 +55,14 @@ class NBRW_new():
         self.Mev = self.M_ev_matrix()
         self.Mnb = self.Mnb_matrix()
         self.Mnb_e = self.Mnb_e_matrix()
-        self.Mv = self.mfpt_matrix(Z=self.Z, pi=self.pi)
-        self.M_e = self.mfpt_matrix(Z=self.Z_e, pi=self.pi_e)
+        self.Mv = self.mfpt_matrix(size=self.n, Z=self.Z, W=self.Wv)
+        self.M_e = self.mfpt_matrix(size=2*self.m, Z=self.Z_e, W=self.We)
 
         self.R_e = 2*self.m * np.eye(2*self.m)
         self.R = self.mrt_nbrw_matrix()
 
         self.Kv = np.trace(self.Z) - 1          # Kemeny's constant in vertex space. Always agrees with mfpt definition.
-        self.Ke = self.Kv + 2*self.m + self.n   # Kemeny's constant in edge space. Always agrees with mfpt definition.
+        self.Ke = self.Kv + 2*self.m - self.n   # Kemeny's constant in edge space. Always agrees with mfpt definition.
         self.Knb_e = np.trace(self.Znb_e) - 1   # NB Kemeny's constant in edge space. Always agrees with mfpt definition.
         self.Knb_v_trace = np.trace(self.Znb) - 1
         self.Knb_v_mfpt = self.pi @ self.Mnb @ self.pi
@@ -188,19 +188,17 @@ class NBRW_new():
 
         return M
     
-    def mfpt_matrix(self, Z, pi) -> np.ndarray:
+    def mfpt_matrix(self, size, Z, W) -> np.ndarray:
         """
         Computes the square matrix of mean first passage times in the SRW. Can handle both vertex and edge spaces.
+        This procedure is adapted from well known results, but is made explicit in
+        Hunter, Jeffrey J. "The computation of the mean first passage times for Markov chains." Linear Algebra and its Applications 549 (2018): 100-122.
         Computational Complexity - dependent on numpy functions.
         Spatial Complexity - either O(m^2) or O(n^2).
         """
-        diag_Z = np.diag(Z)  # Extract diagonal elements of Z
-        M = (diag_Z - Z) / pi[:, np.newaxis]  # Calculate MFPT matrix using broadcasting
-        
-        # Set diagonal elements to zero (optional, if needed)
-        np.fill_diagonal(M, 0)
-        
-        return M
+        I, J = np.eye(size), np.ones((size, size))
+        M = (I - Z + J @ np.diag(np.diag(Z))) @ np.linalg.inv(np.diag(np.diag(W)))
+        return M - np.diag(np.diag(M))
     
     def fund_matrix(self, P, W) -> np.ndarray:
         """Computes the fundamental matrix. Works for either the edge space or the vertex space.
