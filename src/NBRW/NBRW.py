@@ -16,22 +16,70 @@ from matplotlib import pyplot as plt
 
 # Defining the NBRW class
 class NBRW():
-    """A class for Non-Backtracking Random Walks on networks. Accepts as input a SageMath graph object"""
+    """A class for Non-Backtracking Random Walks on networks. Accepts as input a SageMath graph object.
+            
+        Attributes:
+        ----------------BASIC ATTRIBUTES OF GRAPH----------------
+        G (Graph) :                                 SageMath graph object
+        m (int) :                                   number of edges in G
+        n (int) :                                   number of vertices in G
+        A (np.ndarray) :                            adjacency matrix of G
+        edges_list (list) :                         list of edges in G
+        S (np.ndarray) :                            endpoint incidence operator
+        T (np.ndarray) :                            starting point incidence operator
+        tau (np.ndarray) :                          edge reversal operator
+        C (np.ndarray) :                            S @ T
+        B (np.ndarray) :                            C - tau
+        ---------------DEGREE MATRICES-------------------------
+        D (np.ndarray) :                            diagonal matrix of vertex degrees
+        D_inv (np.ndarray) :                        inverse of D
+        De (np.ndarray) :                           diagonal matrix of edge degrees
+        De_inv (np.ndarray) :                       inverse of De
+        -----------------STATIONARY DISTRIBUTIONS----------------
+        pi (np.ndarray) :                           stationary distribution in vertex space
+        pi_e (np.ndarray) :                         stationary distribution in edge space
+        Wnb (np.ndarray) :                          1/(2m) J matrix in edge space - each row is NB edge space stationary distribution
+        Wv (np.ndarray) :                           matrix whose rows are SRW vertex space stationary distribution
+        We (np.ndarray) :                           matrix whose rows are SRW edge space stationary distribution
+        -----------------TRANSITION MATRICES---------------------
+        Pnb (np.ndarray) :                          non-backtracking transition matrix
+        P (np.ndarray) :                            SRW transition matrix in vertex space
+        Pe (np.ndarray) :                           SRW transition matrix in edge space 
+        -----------------FUNDAMENTAL MATRICES---------------------
+        Znb (np.ndarray) :                          NBW analogue to the fundamental matrix in SRW
+        Znb_e (np.ndarray) :                        NBW analogue to the fundamental matrix in SRW in edge space
+        Z (np.ndarray) :                            fundamental matrix in vertex space
+        Z_e (np.ndarray) :                          fundamental matrix in edge space
+        -----------------HITTING AND RETURN TIME MATRICES---------------------
+        M (np.ndarray) :                            helper matrix used to compute Mnb -- from Dario paper
+        Mev (np.ndarray) :                          matrix of hitting times from edge to vertex
+        Mnb (np.ndarray) :                          matrix of hitting times in vertex space
+        Mnb_e (np.ndarray) :                        matrix of hitting times in edge space
+        Mv (np.ndarray) :                           matrix of mean first passage times in vertex space
+        M_e (np.ndarray) :                          matrix of mean first passage times in edge space
+        R_e (np.ndarray) :                          diagonal mean return time matrix in edge space
+        R (np.ndarray) :                            diagonal mean return time matrix in vertex space
+        -----------------KEMENY'S CONSTANTS---------------------
+        Kv (float) :                                Kemeny's constant in vertex space
+        Ke (float) :                                Kemeny's constant in edge space
+        Knb_e (float) :                             NB Kemeny's constant in edge space
+        Knb_v_trace (float) :                       NB Kemeny's constant in vertex space using trace of Znb
+        Knb_v_mfpt (float) :                        NB Kemeny's constant in vertex space using pi @ Mnb @ pi
+        Knb_v_sub (float) :                         NB Kemeny's constant in vertex space using edge space Kemeny's constant"""
 
-    def __init__(self, G: Graph, pinwheel: bool = False) -> None:
+    def __init__(self, G, pinwheel: bool = False) -> None:
         """Initializes the NBRW class with a Sage"Math graph object. Stores all relevant attributes of the NBRW."""
 
         self.G = G
         self.m, self.n = len(G.edges()), len(G.vertices())
-        self.A = G.adjacency_matrix()
+        self.A = np.array(G.adjacency_matrix())
         self.edges_list = list(G.edges())
-
         self.S = self.S_matrix()
         self.T = self.T_matrix()
         self.tau = self.tau_matrix()
-
         self.C = self.S @ self.T
         self.B = self.C - self.tau
+
         self.D = np.diag(G.degree())
         self.D_inv = np.diag([1 / d for d in sorted(self.G.degree(), reverse=True)]) if pinwheel else np.diag([1 / d for d in self.G.degree()])
         self.De = self.De_matrix()
@@ -39,14 +87,13 @@ class NBRW():
 
         self.pi = np.array([d/(2*self.m) for d in sorted(self.G.degree(), reverse=True)]) if pinwheel else np.array([d/(2*self.m) for d in self.G.degree()])
         self.pi_e = np.ones(2*self.m) / (2*self.m)
+        self.Wnb = np.ones((2 * self.m, 2 * self.m)) / (2 * self.m)
+        self.Wv = np.outer(np.ones(self.n), self.pi)
+        self.We = np.outer(np.ones(2*self.m), self.pi_e)
  
         self.Pnb = self.nb_trans_matrix()
         self.P = self.D_inv @ self.A
         self.Pe = self.De_inv @ self.C
-
-        self.Wnb = np.ones((2 * self.m, 2 * self.m)) / (2 * self.m)
-        self.Wv = np.outer(np.ones(self.n), self.pi)
-        self.We = np.outer(np.ones(2*self.m), self.pi_e)
 
         self.Znb = self.znb_matrix()
         self.Znb_e = self.fund_matrix(P=self.Pnb, W=self.Wnb)

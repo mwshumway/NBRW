@@ -8,6 +8,6 @@ This repository's main focus is to create the NBRW package, which contains the f
 	-- graphs.py : Includes several functions that create graph families as a SageMath Graph object. These graph families have been 
 	important to our research and are not built-in in SageMath
 	
-This work was primarily motivated by research conducted alongside Dr. Mark Kempton, Adam Knudson, and Jane Breen. This code has been incredibly useful for modeling these walks and for exploring theoretical results through numerical experimentation.
+This work was primarily motivated by research conducted alongside Adam Knudson, Dr. Mark Kempton, and Dr. Jane Breen. This code has been incredibly useful for modeling these walks and for exploring theoretical results through numerical experimentation.
 
 Much of this code relies on SageMath, which has many built-in functions for graph theory. 
