@@ -11,7 +11,7 @@ associated to NBRW and Kemeny's constant.
 
 # Importing necessary packages
 import numpy as np
-from sage.all import *
+# from sage.all import *
 from matplotlib import pyplot as plt
 
 # Defining the NBRW class
