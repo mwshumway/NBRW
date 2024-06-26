@@ -15,7 +15,7 @@ from sage.all import *
 from matplotlib import pyplot as plt
 
 # Defining the NBRW class
-class NBRW_new():
+class NBRW():
     """A class for Non-Backtracking Random Walks on networks. Accepts as input a SageMath graph object"""
 
     def __init__(self, G: Graph, pinwheel: bool = False) -> None:
