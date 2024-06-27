@@ -2,60 +2,110 @@
 <html><head><title>Python: module NBRW</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head><body bgcolor="#f0f0f8">
-
+    
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
-<tr bgcolor="#7799ee">
+<tr bgcolor="#3e4a61">
+<td valign=bottom>&nbsp;<br>
 <td valign=bottom>&nbsp;<br>
 <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>NBRW</strong></big></big></font></td
 ><td align=right valign=bottom
-><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/mwshumway/Documents/NBW/src/NBRW/NBRW.py">/Users/mwshumway/Documents/NBW/src/NBRW/NBRW.py</a></font></td></tr></table>
-    <p><tt><a href="#NBRW">NBRW</a>.py:&nbsp;A&nbsp;Python&nbsp;package&nbsp;for&nbsp;Non-Backtracking&nbsp;Random&nbsp;Walks&nbsp;on&nbsp;networks.<br>
+><font color="#ffffff" face="helvetica, arial"><a href="." style="color: #ffffff";>index</a><br><a href="file:/Users/mwshumway/Documents/NBW/src/NBRW/NBRW.py" style="color: #ffffff;">/Users/mwshumway/Documents/NBW/src/NBRW/NBRW.py</a></font></td></tr></table>
+    <p><tt><a href="https://github.com/mwshumway/NBRW/blob/main/src/NBRW/NBRW.py">NBRW</a>.py:&nbsp;A&nbsp;Python&nbsp;package&nbsp;for&nbsp;Non-Backtracking&nbsp;Random&nbsp;Walks&nbsp;on&nbsp;networks.<br>
 Matthew&nbsp;Shumway,&nbsp;2024.<br>
 &nbsp;<br>
 Work&nbsp;in&nbsp;conjunction&nbsp;with&nbsp;Adam&nbsp;Knudson,&nbsp;Dr.&nbsp;Mark&nbsp;Kempton,&nbsp;and&nbsp;Dr.&nbsp;Jane&nbsp;Breen.<br>
 &nbsp;<br>
-This&nbsp;package&nbsp;is&nbsp;a&nbsp;Python&nbsp;implementation&nbsp;of&nbsp;the&nbsp;Non-Backtracking&nbsp;Random&nbsp;Walks&nbsp;(<a href="#NBRW">NBRW</a>)&nbsp;on&nbsp;networks.&nbsp;It&nbsp;is&nbsp;designed<br>
+This&nbsp;package&nbsp;is&nbsp;a&nbsp;Python&nbsp;implementation&nbsp;of&nbsp;the&nbsp;Non-Backtracking&nbsp;Random&nbsp;Walks&nbsp;(<a href="https://github.com/mwshumway/NBRW/blob/main/src/NBRW/NBRW.py">NBRW</a>)&nbsp;on&nbsp;networks.&nbsp;It&nbsp;is&nbsp;designed<br>
 to&nbsp;be&nbsp;used&nbsp;with&nbsp;SageMath,&nbsp;a&nbsp;Python-based&nbsp;open-source&nbsp;mathematics&nbsp;software&nbsp;system.&nbsp;The&nbsp;package&nbsp;is&nbsp;designed&nbsp;to&nbsp;be&nbsp;used&nbsp;in<br>
-both&nbsp;research&nbsp;and&nbsp;applications&nbsp;of&nbsp;<a href="#NBRW">NBRW</a>.&nbsp;It&nbsp;contains&nbsp;a&nbsp;<a href="#NBRW">NBRW</a>&nbsp;class,&nbsp;which&nbsp;is&nbsp;designed&nbsp;to&nbsp;compute&nbsp;and&nbsp;store&nbsp;various&nbsp;attributes<br>
-associated&nbsp;to&nbsp;<a href="#NBRW">NBRW</a>&nbsp;and&nbsp;Kemeny's&nbsp;constant.</tt></p>
+both&nbsp;research&nbsp;and&nbsp;applications&nbsp;of&nbsp;<a href="https://github.com/mwshumway/NBRW/blob/main/src/NBRW/NBRW.py">NBRW</a>.&nbsp;It&nbsp;contains&nbsp;a&nbsp;<a href="https://github.com/mwshumway/NBRW/blob/main/src/NBRW/NBRW.py">NBRW</a>&nbsp;class,&nbsp;which&nbsp;is&nbsp;designed&nbsp;to&nbsp;compute&nbsp;and&nbsp;store&nbsp;various&nbsp;attributes<br>
+associated&nbsp;to&nbsp;<a href="https://github.com/mwshumway/NBRW/blob/main/src/NBRW/NBRW.py">NBRW</a>&nbsp;and&nbsp;Kemeny's&nbsp;constant.</tt></p>
 <p>
+
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
-<tr bgcolor="#aa55cc">
-<td colspan=3 valign=bottom>&nbsp;<br>
-<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    <tr bgcolor="#3e4a61">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Installation Guide</strong></big></font></td></tr>
     
-<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
-<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="numpy.html">numpy</a><br>
-</td><td width="25%" valign=top><a href="matplotlib.pyplot.html">matplotlib.pyplot</a><br>
+    <tr><td bgcolor="#3e4a61"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+        <td width="100%">
+        <p>To download the NBRW package, enter the following command in your terminal:</p>
+        <p><code style="background-color: #f7f7f7; border: 1px solid #ccc; padding: 5px;">pip install NBRW</code></p>
+        <p>To stay current with latest updates, visit <a href="https://pypi.org/project/NBRW/">PyPI</a>.</p>
+    </td></tr></table><p>
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#3e4a61">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Example Usage</strong></big></font></td></tr>
+
+    <tr><td bgcolor="#3e4a61"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+        <td width="100%">
+            <p>This section shows the proper way to import the module into a Jupyter Notebook (or Sage terminal) and some 
+                basic usage of the NBRW class. For a complete list of the methods and attributes of the NBRW class, see 'Classes' below.</p>
+            <p><code style="background-color: #ffffff; color: #000; border: 1px solid #000000; padding: 10px; display: block;">
+        <span style="color: rgb(13, 138, 13);">sage:</span> from nbrw.NBRW import NBRW<br>
+        <span style="color: rgb(13, 138, 13);">sage:</span> from sage.all import *<br><br>
+        <span style="color: rgb(13, 138, 13);">sage:</span> g = graphs.PetersenGraph()<br>
+        <span style="color: rgb(13, 138, 13);">sage:</span> G = NBRW(g)<br><br>
+        <span style="color: rgb(13, 138, 13);">sage:</span> G.G.is_edge_transitive()<br>
+        True<br><br>
+        <span style="color: rgb(13, 138, 13);">sage:</span> G.Knb_v_mfpt<br>
+        6.3<br>
+        <span style="color: rgb(13, 138, 13);">sage:</span> G.pi.T @ G.Mnb @ G.pi == G.Knb_v_mfpt<br>
+        True<br><br>
+        <span style="color: rgb(13, 138, 13);">sage:</span> np.allclose(G.Mnb_e @ G.S, G.Pnb @ G.Mnb_e @ G.T.T)<br>
+        True<br>
+        <span style="color: rgb(13, 138, 13);">sage:</span> np.allclose(G.M_e @ G.S, G.Pe @ G.M_e @ G.T.T)<br>
+        True<br>
+            </code></p>
+        <p>There is also an 'extra_graphs' file located within the nbrw module. This file contains a few extra graphs that are not built into SageMath. 
+        It includes implemented Necklace, Cycle Barbell, and Pinwheel Graphs. To use them, follow the examples below:</p>
+        <p><code style="background-color: #fff; color: #000; border: 1px solid #000; padding: 10px; display: block;">
+            <span style="color: rgb(13, 138, 13);">sage:</span> from nbrw import extra_graphs as exg<br> <br>
+            <span style="color: rgb(13, 138, 13);">sage:</span> N = exg.necklace(5)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: gray;"># necklace graph with 5 beads</span><br>
+            <span style="color: rgb(13, 138, 13);">sage:</span> C = exg.cycle_barbell(k=2, a=5, b=6)&nbsp;&nbsp;<span style="color: gray;"># cycle barbell with 2-path, 5-cycle and a 6-cycle</span><br>
+            <span style="color: rgb(13, 138, 13);">sage:</span> P = exg.pinwheel([3, 4, 5])&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: gray;"># pinwheel graph with 3 spokes of 3-, 4-, and 5- cycles</span><br>
+        </code>
+        </td></tr>
+    </td></tr></table><p>
+    
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#3e4a61">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules Used</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#3e4a61"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="https://numpy.org/doc/2.0/">numpy</a><br>
+</td><td width="25%" valign=top><a href="https://matplotlib.org/3.5.3/api/_as_gen/matplotlib.pyplot.html">matplotlib.pyplot</a><br>
+</td><td width="25%" valign=top><a href="https://www.sagemath.org/index.html">sagemath</a><br>
 </td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
-<tr bgcolor="#ee77aa">
+<tr bgcolor="#3e4a61">
 <td colspan=3 valign=bottom>&nbsp;<br>
 <font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
     
-<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<tr><td bgcolor="#3e4a61"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
 <td width="100%"><dl>
-<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
-</font></dt><dd>
-<dl>
-<dt><font face="helvetica, arial"><a href="NBRW.html#NBRW">NBRW</a>
+<dt><font face="helvetica, arial"><a href="NBRW.htmlhttps://github.com/mwshumway/NBRW/blob/main/src/NBRW/NBRW.py">NBRW</a>
 </font></dt></dl>
 </dd>
 </dl>
  <p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
-<tr bgcolor="#ffc8d8">
+<tr bgcolor="#d9dad7">
 <td colspan=3 valign=bottom>&nbsp;<br>
-<font color="#000000" face="helvetica, arial"><a name="NBRW">class <strong>NBRW</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+<font color="#000000" face="helvetica, arial"><a name="NBRW">class <strong>NBRW</strong></a>()</font></td></tr>
     
-<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
-<td colspan=2><tt><a href="#NBRW">NBRW</a>(G,&nbsp;pinwheel:&nbsp;bool&nbsp;=&nbsp;False)&nbsp;-&amp;gt;&nbsp;None<br>
+<tr bgcolor="#d9dad7"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="https://github.com/mwshumway/NBRW/blob/main/src/NBRW/NBRW.py">NBRW</a>(G:&nbsp;Graph,&nbsp;pinwheel:&nbsp;bool&nbsp;=&nbsp;False)&nbsp;->&nbsp;None<br>
 &nbsp;<br>
-A&nbsp;class&nbsp;for&nbsp;Non-Backtracking&nbsp;Random&nbsp;Walks&nbsp;on&nbsp;networks.&nbsp;Accepts&nbsp;as&nbsp;input&nbsp;a&nbsp;SageMath&nbsp;graph&nbsp;<a href="builtins.html#object">object</a>.<br>
+A&nbsp;class&nbsp;for&nbsp;Non-Backtracking&nbsp;Random&nbsp;Walks&nbsp;on&nbsp;networks.&nbsp;Accepts&nbsp;as&nbsp;input&nbsp;a&nbsp;SageMath&nbsp;graph&nbsp;object</a>.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<br>
 Attributes:<br>
 ----------------BASIC&nbsp;ATTRIBUTES&nbsp;OF&nbsp;GRAPH----------------<br>
-G&nbsp;(Graph)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SageMath&nbsp;graph&nbsp;<a href="builtins.html#object">object</a><br>
+G&nbsp;(Graph)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SageMath&nbsp;graph&nbsp;object</a><br>
 m&nbsp;(int)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;number&nbsp;of&nbsp;edges&nbsp;in&nbsp;G<br>
 n&nbsp;(int)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;number&nbsp;of&nbsp;vertices&nbsp;in&nbsp;G<br>
 A&nbsp;(np.ndarray)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;adjacency&nbsp;matrix&nbsp;of&nbsp;G<br>
@@ -102,6 +152,8 @@ Knb_v_trace&nbsp;(float)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&
 Knb_v_mfpt&nbsp;(float)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NB&nbsp;Kemeny's&nbsp;constant&nbsp;in&nbsp;vertex&nbsp;space&nbsp;using&nbsp;pi&nbsp;@&nbsp;Mnb&nbsp;@&nbsp;pi<br>
 Knb_v_sub&nbsp;(float)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NB&nbsp;Kemeny's&nbsp;constant&nbsp;in&nbsp;vertex&nbsp;space&nbsp;using&nbsp;edge&nbsp;space&nbsp;Kemeny's&nbsp;constant<br>&nbsp;</tt></td></tr>
 <tr><td>&nbsp;</td>
+<tr bgcolor="#d9dad7"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+
 <td width="100%">Methods defined here:<br>
 <dl><dt><a name="NBRW-De_matrix"><strong>De_matrix</strong></a>(self) -&gt; numpy.ndarray</dt><dd><tt>Computes&nbsp;the&nbsp;diagonal&nbsp;matrix&nbsp;of&nbsp;edge&nbsp;degrees,&nbsp;De.&nbsp;De&nbsp;is&nbsp;a&nbsp;(2m&nbsp;x&nbsp;2m)&nbsp;matrix.<br>
 Computational&nbsp;Complexity&nbsp;-&nbsp;O(m).<br>
@@ -133,7 +185,7 @@ Spatial&nbsp;Complexity&nbsp;-&nbsp;O(mn).</tt></dd></dl>
 Computational&nbsp;Complexity&nbsp;-&nbsp;O(m).<br>
 Spatial&nbsp;Complexity&nbsp;-&nbsp;O(mn).</tt></dd></dl>
 
-<dl><dt><a name="NBRW-__init__"><strong>__init__</strong></a>(self, G, pinwheel: bool = False) -&gt; None</dt><dd><tt>Initializes&nbsp;the&nbsp;<a href="#NBRW">NBRW</a>&nbsp;class&nbsp;with&nbsp;a&nbsp;Sage"Math&nbsp;graph&nbsp;<a href="builtins.html#object">object</a>.&nbsp;Stores&nbsp;all&nbsp;relevant&nbsp;attributes&nbsp;of&nbsp;the&nbsp;<a href="#NBRW">NBRW</a>.</tt></dd></dl>
+<dl><dt><a name="NBRW-__init__"><strong>__init__</strong></a>(self, G, pinwheel: bool = False) -&gt; None</dt><dd><tt>Initializes&nbsp;the&nbsp;<a href="https://github.com/mwshumway/NBRW/blob/main/src/NBRW/NBRW.py">NBRW</a>&nbsp;class&nbsp;with&nbsp;a&nbsp;Sage"Math&nbsp;graph&nbsp;object</a>.&nbsp;Stores&nbsp;all&nbsp;relevant&nbsp;attributes&nbsp;of&nbsp;the&nbsp;<a href="https://github.com/mwshumway/NBRW/blob/main/src/NBRW/NBRW.py">NBRW</a>.</tt></dd></dl>
 
 <dl><dt><a name="NBRW-alpha_matrix"><strong>alpha_matrix</strong></a>(self) -&gt; numpy.ndarray</dt><dd><tt>Computes&nbsp;the&nbsp;Diag(Alpha)&nbsp;matrix,&nbsp;which&nbsp;is&nbsp;a&nbsp;(n&nbsp;x&nbsp;n)&nbsp;matrix.&nbsp;This&nbsp;is&nbsp;the&nbsp;matrix&nbsp;from&nbsp;the&nbsp;Dario&nbsp;paper.</tt></dd></dl>
 
@@ -180,14 +232,5 @@ Spatial&nbsp;Complexity&nbsp;-&nbsp;O(m^2).</tt></dd></dl>
 fundamental&nbsp;matrix&nbsp;in&nbsp;the&nbsp;SRW&nbsp;case.&nbsp;<br>
 Computational&nbsp;Complexity&nbsp;-&nbsp;O(nm^2),&nbsp;or&nbsp;larger&nbsp;as&nbsp;determined&nbsp;by&nbsp;numpy&nbsp;implementation.<br>
 Spatial&nbsp;Complexity&nbsp;-&nbsp;O(n^2).</tt></dd></dl>
-
-<hr>
-Data descriptors defined here:<br>
-<dl><dt><strong>__dict__</strong></dt>
-<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
-</dl>
-<dl><dt><strong>__weakref__</strong></dt>
-<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
-</dl>
-</td></tr></table></td></tr></table>
+</td></tr></table><p>
 </body></html>
