@@ -10,15 +10,17 @@
 <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>NBRW</strong></big></big></font></td
 ><td align=right valign=bottom
 ><font color="#ffffff" face="helvetica, arial"><a href="." style="color: #ffffff";>index</a><br><a href="file:/Users/mwshumway/Documents/NBW/src/NBRW/NBRW.py" style="color: #ffffff;">/Users/mwshumway/Documents/NBW/src/NBRW/NBRW.py</a></font></td></tr></table>
-    <p><tt><a href="https://github.com/mwshumway/NBRW/blob/main/src/NBRW/NBRW.py">NBRW</a>.py:&nbsp;A&nbsp;Python&nbsp;package&nbsp;for&nbsp;Non-Backtracking&nbsp;Random&nbsp;Walks&nbsp;on&nbsp;networks.<br>
+    <p><tt>NBRW.py:&nbsp;A&nbsp;Python&nbsp;package&nbsp;for&nbsp;Non-Backtracking&nbsp;Random&nbsp;Walks&nbsp;on&nbsp;networks.<br>
 Matthew&nbsp;Shumway,&nbsp;2024.<br>
 &nbsp;<br>
 Work&nbsp;in&nbsp;conjunction&nbsp;with&nbsp;Adam&nbsp;Knudson,&nbsp;Dr.&nbsp;Mark&nbsp;Kempton,&nbsp;and&nbsp;Dr.&nbsp;Jane&nbsp;Breen.<br>
 &nbsp;<br>
-This&nbsp;package&nbsp;is&nbsp;a&nbsp;Python&nbsp;implementation&nbsp;of&nbsp;the&nbsp;Non-Backtracking&nbsp;Random&nbsp;Walks&nbsp;(<a href="https://github.com/mwshumway/NBRW/blob/main/src/NBRW/NBRW.py">NBRW</a>)&nbsp;on&nbsp;networks.&nbsp;It&nbsp;is&nbsp;designed<br>
-to&nbsp;be&nbsp;used&nbsp;with&nbsp;SageMath,&nbsp;a&nbsp;Python-based&nbsp;open-source&nbsp;mathematics&nbsp;software&nbsp;system.&nbsp;The&nbsp;package&nbsp;is&nbsp;designed&nbsp;to&nbsp;be&nbsp;used&nbsp;in<br>
-both&nbsp;research&nbsp;and&nbsp;applications&nbsp;of&nbsp;<a href="https://github.com/mwshumway/NBRW/blob/main/src/NBRW/NBRW.py">NBRW</a>.&nbsp;It&nbsp;contains&nbsp;a&nbsp;<a href="https://github.com/mwshumway/NBRW/blob/main/src/NBRW/NBRW.py">NBRW</a>&nbsp;class,&nbsp;which&nbsp;is&nbsp;designed&nbsp;to&nbsp;compute&nbsp;and&nbsp;store&nbsp;various&nbsp;attributes<br>
-associated&nbsp;to&nbsp;<a href="https://github.com/mwshumway/NBRW/blob/main/src/NBRW/NBRW.py">NBRW</a>&nbsp;and&nbsp;Kemeny's&nbsp;constant.</tt></p>
+This&nbsp;package&nbsp;is&nbsp;a&nbsp;Python&nbsp;implementation&nbsp;of&nbsp;the&nbsp;Non-Backtracking&nbsp;Random&nbsp;Walks&nbsp;NBRW&nbsp;on&nbsp;networks.&nbsp;It&nbsp;is&nbsp;designed<br>
+to&nbsp;be&nbsp;used&nbsp;with&nbsp;SageMath,&nbsp;a&nbsp;Python-based&nbsp;open-source&nbsp;mathematics&nbsp;software&nbsp;system.&nbsp;&nbsp;It&nbsp;contains&nbsp;a&nbsp;NBRW&nbsp;class,&nbsp;which&nbsp;is&nbsp;designed&nbsp;to&nbsp;compute&nbsp;and&nbsp;store&nbsp;various&nbsp;attributes<br>
+associated&nbsp;to&nbsp;NBRW&nbsp;and&nbsp;Kemeny's&nbsp;constant.&nbsp;It&nbsp;also&nbsp;contains&nbsp;a&nbsp;few&nbsp;extra&nbsp;graph&nbsp;families.<br><br>
+It&nbsp;will&nbsp;not&nbsp;work&nbsp;without&nbsp;the&nbsp;SageMath&nbsp;module&nbsp;installed.&nbsp;To&nbsp;view&nbsp;the&nbsp;source&nbsp;code&nbsp;of&nbsp;this&nbsp;project,&nbsp;click&nbsp;<a href="https://github.com/mwshumway/NBRW/blob/main/src/NBRW/NBRW.py">here</a>.<br>
+
+</tt></p>
 <p>
 
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
@@ -69,6 +71,18 @@ associated&nbsp;to&nbsp;<a href="https://github.com/mwshumway/NBRW/blob/main/src
         </code>
         </td></tr>
     </td></tr></table><p>
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#3e4a61">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Suggestions, Issues, etc.</strong></big></font></td></tr>
+
+    <tr><td bgcolor="#3e4a61"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+        <td width="100%">
+            <p>If you have any suggestions, issues, or questions, please submit a 'New Issue' on the <a href="https://github.com/mwshumway/NBRW/issues">GitHub repository</a>. Alternatively,
+            you can just tell me in person or reach me through email at mwshumway7@gmail.com.</p>
+    
+        </td></tr></table><p>
     
 
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
@@ -99,7 +113,7 @@ associated&nbsp;to&nbsp;<a href="https://github.com/mwshumway/NBRW/blob/main/src
 <font color="#000000" face="helvetica, arial"><a name="NBRW">class <strong>NBRW</strong></a>()</font></td></tr>
     
 <tr bgcolor="#d9dad7"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
-<td colspan=2><tt><a href="https://github.com/mwshumway/NBRW/blob/main/src/NBRW/NBRW.py">NBRW</a>(G:&nbsp;Graph,&nbsp;pinwheel:&nbsp;bool&nbsp;=&nbsp;False)&nbsp;->&nbsp;None<br>
+<td colspan=2><tt>NBRW(G:&nbsp;Graph,&nbsp;pinwheel:&nbsp;bool&nbsp;=&nbsp;False)&nbsp;->&nbsp;None<br>
 &nbsp;<br>
 A&nbsp;class&nbsp;for&nbsp;Non-Backtracking&nbsp;Random&nbsp;Walks&nbsp;on&nbsp;networks.&nbsp;Accepts&nbsp;as&nbsp;input&nbsp;a&nbsp;SageMath&nbsp;graph&nbsp;object</a>.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<br>
@@ -127,21 +141,21 @@ Wnb&nbsp;(np.ndarray)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs
 Wv&nbsp;(np.ndarray)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;matrix&nbsp;whose&nbsp;rows&nbsp;are&nbsp;SRW&nbsp;vertex&nbsp;space&nbsp;stationary&nbsp;distribution<br>
 We&nbsp;(np.ndarray)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;matrix&nbsp;whose&nbsp;rows&nbsp;are&nbsp;SRW&nbsp;edge&nbsp;space&nbsp;stationary&nbsp;distribution<br>
 -----------------TRANSITION&nbsp;MATRICES---------------------<br>
-Pnb&nbsp;(np.ndarray)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;non-backtracking&nbsp;transition&nbsp;matrix<br>
+Pnb&nbsp;(np.ndarray)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NBW&nbsp;transition&nbsp;matrix&nbsp;in&nbsp;edge&nbsp;space&nbsp;<br>
 P&nbsp;(np.ndarray)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SRW&nbsp;transition&nbsp;matrix&nbsp;in&nbsp;vertex&nbsp;space<br>
 Pe&nbsp;(np.ndarray)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SRW&nbsp;transition&nbsp;matrix&nbsp;in&nbsp;edge&nbsp;space&nbsp;<br>
 -----------------FUNDAMENTAL&nbsp;MATRICES---------------------<br>
 Znb&nbsp;(np.ndarray)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NBW&nbsp;analogue&nbsp;to&nbsp;the&nbsp;fundamental&nbsp;matrix&nbsp;in&nbsp;SRW<br>
-Znb_e&nbsp;(np.ndarray)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NBW&nbsp;analogue&nbsp;to&nbsp;the&nbsp;fundamental&nbsp;matrix&nbsp;in&nbsp;SRW&nbsp;in&nbsp;edge&nbsp;space<br>
+Znb_e&nbsp;(np.ndarray)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NBW&nbsp;fundamental&nbsp;matrix&nbsp;edge&nbsp;space<br>
 Z&nbsp;(np.ndarray)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fundamental&nbsp;matrix&nbsp;in&nbsp;vertex&nbsp;space<br>
 Z_e&nbsp;(np.ndarray)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fundamental&nbsp;matrix&nbsp;in&nbsp;edge&nbsp;space<br>
 -----------------HITTING&nbsp;AND&nbsp;RETURN&nbsp;TIME&nbsp;MATRICES---------------------<br>
-M&nbsp;(np.ndarray)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;helper&nbsp;matrix&nbsp;used&nbsp;to&nbsp;compute&nbsp;Mnb&nbsp;--&nbsp;from&nbsp;Dario&nbsp;paper<br>
-Mev&nbsp;(np.ndarray)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;matrix&nbsp;of&nbsp;hitting&nbsp;times&nbsp;from&nbsp;edge&nbsp;to&nbsp;vertex<br>
-Mnb&nbsp;(np.ndarray)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;matrix&nbsp;of&nbsp;hitting&nbsp;times&nbsp;in&nbsp;vertex&nbsp;space<br>
-Mnb_e&nbsp;(np.ndarray)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;matrix&nbsp;of&nbsp;hitting&nbsp;times&nbsp;in&nbsp;edge&nbsp;space<br>
-Mv&nbsp;(np.ndarray)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;matrix&nbsp;of&nbsp;mean&nbsp;first&nbsp;passage&nbsp;times&nbsp;in&nbsp;vertex&nbsp;space<br>
-M_e&nbsp;(np.ndarray)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;matrix&nbsp;of&nbsp;mean&nbsp;first&nbsp;passage&nbsp;times&nbsp;in&nbsp;edge&nbsp;space<br>
+M&nbsp;(np.ndarray)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;helper&nbsp;matrix&nbsp;used&nbsp;to&nbsp;compute&nbsp;Mnb&nbsp;--&nbsp;from&nbsp;Dario Fasino&nbsp;paper<br>
+Mev&nbsp;(np.ndarray)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;matrix&nbsp;of&nbsp;NBW&nbsp;hitting&nbsp;times&nbsp;from&nbsp;edge&nbsp;to&nbsp;vertex<br>
+Mnb&nbsp;(np.ndarray)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;matrix&nbsp;of&nbsp;NBW&nbsp;hitting&nbsp;times&nbsp;in&nbsp;vertex&nbsp;space<br>
+Mnb_e&nbsp;(np.ndarray)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;matrix&nbsp;of&nbsp;NBW&nbsp;hitting&nbsp;times&nbsp;in&nbsp;edge&nbsp;space<br>
+Mv&nbsp;(np.ndarray)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;matrix&nbsp;of&nbsp;SRW&nbsp;hitting&nbsp;times&nbsp;in&nbsp;vertex&nbsp;space<br>
+M_e&nbsp;(np.ndarray)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;matrix&nbsp;of&nbsp;SRW&nbsp;hitting&nbsp;times&nbsp;in&nbsp;edge&nbsp;space<br>
 R_e&nbsp;(np.ndarray)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;diagonal&nbsp;mean&nbsp;return&nbsp;time&nbsp;matrix&nbsp;in&nbsp;edge&nbsp;space<br>
 R&nbsp;(np.ndarray)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;diagonal&nbsp;mean&nbsp;return&nbsp;time&nbsp;matrix&nbsp;in&nbsp;vertex&nbsp;space<br>
 -----------------KEMENY'S&nbsp;CONSTANTS---------------------<br>
@@ -150,7 +164,7 @@ Ke&nbsp;(float)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs
 Knb_e&nbsp;(float)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NB&nbsp;Kemeny's&nbsp;constant&nbsp;in&nbsp;edge&nbsp;space<br>
 Knb_v_trace&nbsp;(float)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NB&nbsp;Kemeny's&nbsp;constant&nbsp;in&nbsp;vertex&nbsp;space&nbsp;using&nbsp;trace&nbsp;of&nbsp;Znb<br>
 Knb_v_mfpt&nbsp;(float)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NB&nbsp;Kemeny's&nbsp;constant&nbsp;in&nbsp;vertex&nbsp;space&nbsp;using&nbsp;pi&nbsp;@&nbsp;Mnb&nbsp;@&nbsp;pi<br>
-Knb_v_sub&nbsp;(float)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NB&nbsp;Kemeny's&nbsp;constant&nbsp;in&nbsp;vertex&nbsp;space&nbsp;using&nbsp;edge&nbsp;space&nbsp;Kemeny's&nbsp;constant<br>&nbsp;</tt></td></tr>
+Knb_v_sub&nbsp;(float)&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NB&nbsp;Kemeny's&nbsp;constant&nbsp;in&nbsp;vertex&nbsp;space&nbsp;subtracting&nbsp;(2m-n)&nbsp;from&nbsp;edge&nbsp;Kemeny's<br>&nbsp;</tt></td></tr>
 <tr><td>&nbsp;</td>
 <tr bgcolor="#d9dad7"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
 
@@ -164,7 +178,7 @@ to&nbsp;vertex&nbsp;v.<br>
 Computational&nbsp;Complexity&nbsp;-&nbsp;O(nm).<br>
 Spatial&nbsp;Complexity&nbsp;-&nbsp;O(mn).</tt></dd></dl>
 
-<dl><dt><a name="NBRW-M_matrix"><strong>M_matrix</strong></a>(self) -&gt; numpy.ndarray</dt><dd><tt>Found&nbsp;in&nbsp;(4.4)&nbsp;of&nbsp;the&nbsp;Dario&nbsp;hitting&nbsp;times&nbsp;paper.&nbsp;M&nbsp;is&nbsp;a&nbsp;(n&nbsp;x&nbsp;n)&nbsp;matrix.&nbsp;Startpoint&nbsp;incident&nbsp;operator&nbsp;T&nbsp;divided&nbsp;<br>
+<dl><dt><a name="NBRW-M_matrix"><strong>M_matrix</strong></a>(self) -&gt; numpy.ndarray</dt><dd><tt>Found&nbsp;in&nbsp;(4.4)&nbsp;of&nbsp;the&nbsp;Dario Fasino&nbsp;hitting&nbsp;times&nbsp;paper.&nbsp;M&nbsp;is&nbsp;a&nbsp;(n&nbsp;x&nbsp;n)&nbsp;matrix.&nbsp;Startpoint&nbsp;incident&nbsp;operator&nbsp;T&nbsp;divided&nbsp;<br>
 by&nbsp;row&nbsp;sums&nbsp;of&nbsp;T.&nbsp;Used&nbsp;to&nbsp;calculate&nbsp;Mnb_v.<br>
 Computational&nbsp;Complexity&nbsp;-&nbsp;O(nm).<br>
 Spatial&nbsp;Complexity&nbsp;-&nbsp;O(nm).</tt></dd></dl>
@@ -185,11 +199,11 @@ Spatial&nbsp;Complexity&nbsp;-&nbsp;O(mn).</tt></dd></dl>
 Computational&nbsp;Complexity&nbsp;-&nbsp;O(m).<br>
 Spatial&nbsp;Complexity&nbsp;-&nbsp;O(mn).</tt></dd></dl>
 
-<dl><dt><a name="NBRW-__init__"><strong>__init__</strong></a>(self, G, pinwheel: bool = False) -&gt; None</dt><dd><tt>Initializes&nbsp;the&nbsp;<a href="https://github.com/mwshumway/NBRW/blob/main/src/NBRW/NBRW.py">NBRW</a>&nbsp;class&nbsp;with&nbsp;a&nbsp;Sage"Math&nbsp;graph&nbsp;object</a>.&nbsp;Stores&nbsp;all&nbsp;relevant&nbsp;attributes&nbsp;of&nbsp;the&nbsp;<a href="https://github.com/mwshumway/NBRW/blob/main/src/NBRW/NBRW.py">NBRW</a>.</tt></dd></dl>
+<dl><dt><a name="NBRW-__init__"><strong>__init__</strong></a>(self, G, pinwheel: bool = False) -&gt; None</dt><dd><tt>Initializes&nbsp;the&nbsp;NBRW&nbsp;class&nbsp;with&nbsp;a&nbsp;Sage"Math&nbsp;graph&nbsp;object</a>.&nbsp;Stores&nbsp;all&nbsp;relevant&nbsp;attributes&nbsp;of&nbsp;the&nbsp;NBRW.</tt></dd></dl>
 
-<dl><dt><a name="NBRW-alpha_matrix"><strong>alpha_matrix</strong></a>(self) -&gt; numpy.ndarray</dt><dd><tt>Computes&nbsp;the&nbsp;Diag(Alpha)&nbsp;matrix,&nbsp;which&nbsp;is&nbsp;a&nbsp;(n&nbsp;x&nbsp;n)&nbsp;matrix.&nbsp;This&nbsp;is&nbsp;the&nbsp;matrix&nbsp;from&nbsp;the&nbsp;Dario&nbsp;paper.</tt></dd></dl>
+<dl><dt><a name="NBRW-alpha_matrix"><strong>alpha_matrix</strong></a>(self) -&gt; numpy.ndarray</dt><dd><tt>Computes&nbsp;the&nbsp;Diag(Alpha)&nbsp;matrix,&nbsp;which&nbsp;is&nbsp;a&nbsp;(n&nbsp;x&nbsp;n)&nbsp;matrix.&nbsp;This&nbsp;is&nbsp;the&nbsp;matrix&nbsp;from&nbsp;the&nbsp;Dario Fasino&nbsp;paper.</tt></dd></dl>
 
-<dl><dt><a name="NBRW-beta_vector"><strong>beta_vector</strong></a>(self, mat) -&gt; numpy.ndarray</dt><dd><tt>Computes&nbsp;the&nbsp;Beta&nbsp;vector,&nbsp;which&nbsp;is&nbsp;a&nbsp;(n&nbsp;x&nbsp;1)&nbsp;vector.&nbsp;This&nbsp;is&nbsp;the&nbsp;vector&nbsp;from&nbsp;the&nbsp;Dario&nbsp;paper.</tt></dd></dl>
+<dl><dt><a name="NBRW-beta_vector"><strong>beta_vector</strong></a>(self, mat) -&gt; numpy.ndarray</dt><dd><tt>Computes&nbsp;the&nbsp;Beta&nbsp;vector,&nbsp;which&nbsp;is&nbsp;a&nbsp;(n&nbsp;x&nbsp;1)&nbsp;vector.&nbsp;This&nbsp;is&nbsp;the&nbsp;vector&nbsp;from&nbsp;the&nbsp;Dario Fasino&nbsp;paper.</tt></dd></dl>
 
 <dl><dt><a name="NBRW-fund_matrix"><strong>fund_matrix</strong></a>(self, P, W) -&gt; numpy.ndarray</dt><dd><tt>Computes&nbsp;the&nbsp;fundamental&nbsp;matrix.&nbsp;Works&nbsp;for&nbsp;either&nbsp;the&nbsp;edge&nbsp;space&nbsp;or&nbsp;the&nbsp;vertex&nbsp;space.<br>
 Computational&nbsp;Complexity&nbsp;-&nbsp;depends&nbsp;on&nbsp;np.linalg.inv.<br>
@@ -204,7 +218,7 @@ Computational&nbsp;Complexity&nbsp;-&nbsp;dependent&nbsp;on&nbsp;numpy&nbsp;func
 Spatial&nbsp;Complexity&nbsp;-&nbsp;either&nbsp;O(m^3)&nbsp;or&nbsp;O(n^3).</tt></dd></dl>
 
 <dl><dt><a name="NBRW-mrt_nbrw_matrix"><strong>mrt_nbrw_matrix</strong></a>(self) -&gt; numpy.ndarray</dt><dd><tt>Computes&nbsp;the&nbsp;diagonal&nbsp;mean&nbsp;return&nbsp;time&nbsp;matrix,&nbsp;which&nbsp;is&nbsp;size&nbsp;(n&nbsp;x&nbsp;n).&nbsp;Should&nbsp;agree&nbsp;with&nbsp;the&nbsp;SRW.<br>
-Equations&nbsp;taken&nbsp;from&nbsp;(4.8)&nbsp;in&nbsp;the&nbsp;Dario&nbsp;paper.<br>
+Equations&nbsp;taken&nbsp;from&nbsp;(4.8)&nbsp;in&nbsp;the&nbsp;Dario Fasino&nbsp;paper.<br>
 Computational&nbsp;Complexity&nbsp;-&nbsp;O(nm^2).<br>
 Spatial&nbsp;Complexity&nbsp;-&nbsp;O(n^2).</tt></dd></dl>
 
@@ -213,7 +227,7 @@ Computational&nbsp;Complexity&nbsp;-&nbsp;depends&nbsp;on&nbsp;np.linalg.inv.<br
 Spatial&nbsp;Complexity&nbsp;-&nbsp;O(m^2).</tt></dd></dl>
 
 <dl><dt><a name="NBRW-nb_hitting_times"><strong>nb_hitting_times</strong></a>(self, j: int) -&gt; numpy.ndarray</dt><dd><tt>Compute&nbsp;the&nbsp;NB&nbsp;hitting&nbsp;times&nbsp;from&nbsp;edge&nbsp;e&nbsp;to&nbsp;vertex&nbsp;j.&nbsp;This&nbsp;implementation&nbsp;is&nbsp;based&nbsp;on&nbsp;Theorem&nbsp;4.3&nbsp;in&nbsp;the&nbsp;<br>
-Dario&nbsp;paper.<br>
+Dario Fasino&nbsp;paper.<br>
 Resulting&nbsp;vector&nbsp;is&nbsp;a&nbsp;column&nbsp;of&nbsp;M_{ev}.<br>
 Computational&nbsp;Complexity&nbsp;-&nbsp;depends&nbsp;on&nbsp;the&nbsp;np.linalg.solve()&nbsp;function.<br>
 Spatial&nbsp;Complexity&nbsp;-&nbsp;O(m).</tt></dd></dl>
@@ -233,4 +247,47 @@ fundamental&nbsp;matrix&nbsp;in&nbsp;the&nbsp;SRW&nbsp;case.&nbsp;<br>
 Computational&nbsp;Complexity&nbsp;-&nbsp;O(nm^2),&nbsp;or&nbsp;larger&nbsp;as&nbsp;determined&nbsp;by&nbsp;numpy&nbsp;implementation.<br>
 Spatial&nbsp;Complexity&nbsp;-&nbsp;O(n^2).</tt></dd></dl>
 </td></tr></table><p>
+</td></tr></table><p>
+
+
+    <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+        <tr bgcolor="#3e4a61">
+        <td colspan=3 valign=bottom>&nbsp;<br>
+        <font color="#ffffff" face="helvetica, arial"><big><strong>Functions (located in extra_graphs)</strong></big></font></td></tr>
+    <tr><td bgcolor="#3e4a61"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+        <td width="100%">
+            <dl style="background-color: #d9dad7; border: 1px solid #d9dad7; padding: 10px; border-radius: 4px; margin-bottom: 10px;">
+                <dt><a name="-cycle_barbell"><strong>cycle_barbell</strong></a>(k: int, a: int, b: int) -> Graph</dt>
+                <dd><tt>Path&nbsp;on&nbsp;k&nbsp;vertices,&nbsp;the&nbsp;end&nbsp;two&nbsp;are&nbsp;shared&nbsp;with&nbsp;a&nbsp;cycle&nbsp;of&nbsp;size&nbsp;a&nbsp;and&nbsp;a&nbsp;cycle&nbsp;of&nbsp;size&nbsp;b<br>
+                so&nbsp;|V(G)|&nbsp;=&nbsp;a&nbsp;+&nbsp;b&nbsp;+&nbsp;k&nbsp;-&nbsp;2</tt></dd>
+                <br>
+                <dt><a name="-necklace"><strong>necklace</strong></a>(k: int) -> Graph</dt>
+                <dd><tt>|V|&nbsp;=&nbsp;n&nbsp;=&nbsp;4k&nbsp;+&nbsp;2<br>
+                k&nbsp;is&nbsp;number&nbsp;of&nbsp;beads&nbsp;(including&nbsp;the&nbsp;first&nbsp;and&nbsp;last&nbsp;bead,&nbsp;which&nbsp;are&nbsp;different)<br>
+                Needs&nbsp;k&nbsp;&gt;=&nbsp;2</tt></dd>
+                <br>
+                <dt><a name="-pinwheel"><strong>pinwheel</strong></a>(cycle_sizes: list[int]) -> Graph</dt>
+                <dd><tt>Accepts&nbsp;a&nbsp;list&nbsp;of&nbsp;integers&nbsp;called&nbsp;cycle_sizes,&nbsp;which&nbsp;will&nbsp;determine&nbsp;the&nbsp;number&nbsp;<br>
+                of&nbsp;cycles&nbsp;and&nbsp;also&nbsp;their&nbsp;size.</tt></dd>
+            </dl>
+        </td></tr></table><p></p>
+    
+    
+
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+    <tr bgcolor="#3e4a61">
+    <td colspan=3 valign=bottom>&nbsp;<br>
+    <font color="#ffffff" face="helvetica, arial"><big><strong>Resources Used</strong></big></font></td></tr>
+    
+    <tr><td bgcolor="#3e4a61"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+        <td width="100%">
+            <ul>
+                <li> Fasino, Dario, Arianna Tonetto, and Francesco Tudisco. "Hitting times for second-order random walks." European Journal of Applied Mathematics 34.4 (2023): 642-666. <br>
+                <li>Hunter, Jeffrey J. "The computation of the mean first passage times for Markov chains." Linear Algebra and its Applications 549 (2018): 100-122.<br>
+                <li> *Add more resources on a later iteration*
+            </ul>
+        
+    </td></tr></table><p>
+
 </body></html>

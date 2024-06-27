@@ -10,10 +10,10 @@ generate graphs. For example, this module will contain functionality to generate
     - Pinwheel graphs with k blades each of potentially different size."""
 
 # Imports
-from sage.all import *
+# from sage.all import *
 import numpy as np
 
-def cycle_barbell(k: int, a: int, b: int) -> Graph:
+def cycle_barbell(k: int, a: int, b: int):
     """
     Path on k verties, the end two are shared with a cycle of size a and a cycle of size b
     so |V(G)| = a + b + c - 2
@@ -38,9 +38,11 @@ def cycle_barbell(k: int, a: int, b: int) -> Graph:
 def necklace(k):
     """
     |V| = n = 4k + 2
-    k is number of "beads" including the end ones which are a little different
-    (so only works if k\geq2)
+    k is number of beads (including the first and last bead, which are different)
+    Needs k >= 2
     """
+    if k < 2:
+        raise ValueError("k must be at least 2")
     n = 4*k + 2
     G = Graph(n)
     #first bead
@@ -59,7 +61,7 @@ def necklace(k):
 
 def pinwheel(cycle_sizes: list[int]):
     """Accepts a list of integers called cycle_sizes, which will determine the number 
-    of cycles and also their length."""
+    of cycles and also their size."""
     # Create an empty graph
     G = Graph()
     
