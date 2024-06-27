@@ -11,7 +11,7 @@ associated to NBRW and Kemeny's constant.
 
 # Importing necessary packages
 import numpy as np
-# from sage.all import *
+from sage.all import *
 from matplotlib import pyplot as plt
 
 # Defining the NBRW class
@@ -67,7 +67,7 @@ class NBRW():
         Knb_v_mfpt (float) :                        NB Kemeny's constant in vertex space using pi @ Mnb @ pi
         Knb_v_sub (float) :                         NB Kemeny's constant in vertex space using edge space Kemeny's constant"""
 
-    def __init__(self, G, pinwheel: bool = False) -> None:
+    def __init__(self, G: Graph, pinwheel: bool = False) -> None:
         """Initializes the NBRW class with a Sage"Math graph object. Stores all relevant attributes of the NBRW."""
 
         self.G = G

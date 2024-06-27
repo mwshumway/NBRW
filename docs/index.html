@@ -32,6 +32,7 @@ It&nbsp;will&nbsp;not&nbsp;work&nbsp;without&nbsp;the&nbsp;SageMath&nbsp;module&
         <td width="100%">
         <p>To download the NBRW package, enter the following command in your terminal:</p>
         <p><code style="background-color: #f7f7f7; border: 1px solid #ccc; padding: 5px;">pip install NBRW</code></p>
+        <p>After this, you will need to restart your kernel or terminal. </p>
         <p>To stay current with latest updates, visit <a href="https://pypi.org/project/NBRW/">PyPI</a>.</p>
     </td></tr></table><p>
 
@@ -45,7 +46,7 @@ It&nbsp;will&nbsp;not&nbsp;work&nbsp;without&nbsp;the&nbsp;SageMath&nbsp;module&
             <p>This section shows the proper way to import the module into a Jupyter Notebook (or Sage terminal) and some 
                 basic usage of the NBRW class. For a complete list of the methods and attributes of the NBRW class, see 'Classes' below.</p>
             <p><code style="background-color: #ffffff; color: #000; border: 1px solid #000000; padding: 10px; display: block;">
-        <span style="color: rgb(13, 138, 13);">sage:</span> from nbrw.NBRW import NBRW<br>
+        <span style="color: rgb(13, 138, 13);">sage:</span> from nbrw import NBRW<br>
         <span style="color: rgb(13, 138, 13);">sage:</span> from sage.all import *<br><br>
         <span style="color: rgb(13, 138, 13);">sage:</span> g = graphs.PetersenGraph()<br>
         <span style="color: rgb(13, 138, 13);">sage:</span> G = NBRW(g)<br><br>
