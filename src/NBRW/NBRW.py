@@ -114,11 +114,11 @@ class NBRW():
 
         self.Kv = np.trace(self.Z) - 1          # Kemeny's constant in vertex space. Always agrees with mfpt definition.
         self.Ke = self.Kv + 2*self.m - self.n   # Kemeny's constant in edge space. Always agrees with mfpt definition.
-        self.Knb_e = np.trace(self.Znb_e) - 1   # NB Kemeny's constant in edge space. Always agrees with mfpt definition.
         if not cycle:
+            self.Knb_e = np.trace(self.Znb_e) - 1   # NB Kemeny's constant in edge space. Always agrees with mfpt definition.
             self.Knb_v_trace = np.trace(self.Znb) - 1
+            self.Knb_v_sub = self.Knb_e - 2*self.m + self.n
         self.Knb_v_mfpt = self.pi @ self.Mnb @ self.pi
-        self.Knb_v_sub = self.Knb_e - 2*self.m + self.n
 
     # Display methods
     # ==============================================================================================================================
