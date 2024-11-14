@@ -95,15 +95,16 @@ class NBRW():
         self.P = self.D_inv @ self.A
         self.Pe = self.De_inv @ self.C
 
-        self.Znb = self.znb_matrix()
-        self.Znb_e = self.fund_matrix(P=self.Pnb, W=self.Wnb)
-        self.Z = self.fund_matrix(P=self.P, W=self.Wv)
-        self.Z_e = self.fund_matrix(P=self.Pe, W=self.We)
+        if not cycle:
+            self.Znb = self.znb_matrix()
+            self.Znb_e = self.fund_matrix(P=self.Pnb, W=self.Wnb)
+            self.Z = self.fund_matrix(P=self.P, W=self.Wv)
+            self.Z_e = self.fund_matrix(P=self.Pe, W=self.We)
         
         self.M = self.M_matrix()
         self.Mev = self.M_ev_matrix()
         self.Mnb = self.Mnb_matrix()
-        if Mnb_e:
+        if not cycle:
             self.Mnb_e = self.Mnb_e_matrix()
         self.Mv = self.mfpt_matrix(size=self.n, Z=self.Z, W=self.Wv)
         self.M_e = self.mfpt_matrix(size=2*self.m, Z=self.Z_e, W=self.We)
@@ -114,7 +115,8 @@ class NBRW():
         self.Kv = np.trace(self.Z) - 1          # Kemeny's constant in vertex space. Always agrees with mfpt definition.
         self.Ke = self.Kv + 2*self.m - self.n   # Kemeny's constant in edge space. Always agrees with mfpt definition.
         self.Knb_e = np.trace(self.Znb_e) - 1   # NB Kemeny's constant in edge space. Always agrees with mfpt definition.
-        self.Knb_v_trace = np.trace(self.Znb) - 1
+        if not cycle:
+            self.Knb_v_trace = np.trace(self.Znb) - 1
         self.Knb_v_mfpt = self.pi @ self.Mnb @ self.pi
         self.Knb_v_sub = self.Knb_e - 2*self.m + self.n
 
