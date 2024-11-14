@@ -98,8 +98,8 @@ class NBRW():
         if not cycle:
             self.Znb = self.znb_matrix()
             self.Znb_e = self.fund_matrix(P=self.Pnb, W=self.Wnb)
-            self.Z = self.fund_matrix(P=self.P, W=self.Wv)
-            self.Z_e = self.fund_matrix(P=self.Pe, W=self.We)
+        self.Z = self.fund_matrix(P=self.P, W=self.Wv)
+        self.Z_e = self.fund_matrix(P=self.Pe, W=self.We)
         
         self.M = self.M_matrix()
         self.Mev = self.M_ev_matrix()
