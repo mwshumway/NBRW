@@ -67,7 +67,7 @@ class NBRW():
         Knb_v_mfpt (float) :                        NB Kemeny's constant in vertex space using pi @ Mnb @ pi
         Knb_v_sub (float) :                         NB Kemeny's constant in vertex space using edge space Kemeny's constant"""
 
-    def __init__(self, G: Graph, pinwheel: bool = False, Mnb_e: bool = False) -> None:
+    def __init__(self, G: Graph, pinwheel: bool = False, cycle: bool = False) -> None:
         """Initializes the NBRW class with a Sage"Math graph object. Stores all relevant attributes of the NBRW."""
 
         self.G = G
