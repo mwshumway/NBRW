@@ -45,7 +45,3 @@ coverage.xml
 
 # Results
 tests/results.json
-
-# Docs (generated)
-docs/_build/
-docs/index.html
