@@ -1,0 +1,51 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Virtualenv
+venv/
+ENV/
+env/
+.venv/
+
+# Pytest / test logs
+htmlcov/
+.tox/
+.nox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+# VSCode
+.vscode/
+
+# Results
+tests/results.json
+
+# Docs (generated)
+docs/_build/
+docs/index.html
