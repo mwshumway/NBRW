@@ -1,9 +1,9 @@
 """NBRW.py: A Python package for Non-Backtracking Random Walks on networks.
 Matthew Shumway, 2024.
 
-Work in conjunction with Adam Knudson, Dr. Mark Kempton, and Dr. Jane Breen.
+Work in conjunction with Jane Breen, Mark Kempton, and Adam Knudson.
 
-This package is a Python implementation of the Non-Backtracking Random Walks (NBRW) on networks. It is designed
+This package is a Python implementation of the Non-Backtracking Random Walks (NBRW) on graphs. It is designed
 to be used with SageMath, a Python-based open-source mathematics software system. The package is designed to be used in
 both research and applications of NBRW. It contains a NBRW class, which is designed to compute and store various attributes
 associated to NBRW and Kemeny's constant.
@@ -325,6 +325,8 @@ class NBRW():
         """Computes the Beta vector, which is a (n x 1) vector. This is the vector from the Dario paper."""
         return np.diag(self.D_inv @ self.T @ self.Mnb_e @ mat @ self.T.T)
     
-    def italian_mfpt(self, alpha, beta):
-        """Computes the NB vertex mean first passage times (Mv_nb) from methods in the Italian paper."""
+    def fasino_mfpt(self, alpha, beta):
+        """Computes the NB vertex mean first passage times (Mv_nb) from methods in the Fasino paper.
+        Fasino, Dario, Arianna Tonetto, and Francesco Tudisco. "Hitting times for second-order random walks. European Journal of Applied Mathematics" 
+        """
         return self.D_inv @ self.T @ self.Mnb_e @ alpha @ self.T.T - np.outer(np.ones(self.n), beta)
