@@ -25,6 +25,7 @@ class NBRW():
         n (int) :                                   number of vertices in G
         A (np.ndarray) :                            adjacency matrix of G
         edges_list (list) :                         list of edges in G
+        degree_list (list):                        list of vertices in G
         S (np.ndarray) :                            endpoint incidence operator
         T (np.ndarray) :                            starting point incidence operator
         tau (np.ndarray) :                          edge reversal operator
@@ -73,19 +74,21 @@ class NBRW():
         self.G = G
         self.m, self.n = len(G.edges()), len(G.vertices())
         self.A = np.array(G.adjacency_matrix())
-        self.edges_list = list(G.edges())
+        self.edges_list = sorted(list(G.edges()))
+        self.degree_list = sorted(list(G.degree()), reverse=True) if pinwheel else G.degree()
         self.S = self.S_matrix()
         self.T = self.T_matrix()
         self.tau = self.tau_matrix()
         self.C = self.S @ self.T
         self.B = self.C - self.tau
 
-        self.D = np.diag(G.degree())
-        self.D_inv = np.diag([1 / d for d in sorted(self.G.degree(), reverse=True)]) if pinwheel else np.diag([1 / d for d in self.G.degree()])
+        
+        self.D = np.diag(self.degree_list)
+        self.D_inv = np.diag([1 / d for d in self.degree_list])
         self.De = self.De_matrix()
         self.De_inv = np.diag(1 / np.diag(self.De))
 
-        self.pi = np.array([d/(2*self.m) for d in sorted(self.G.degree(), reverse=True)]) if pinwheel else np.array([d/(2*self.m) for d in self.G.degree()])
+        self.pi = np.array([d/(2*self.m) for d in self.degree_list])
         self.pi_e = np.ones(2*self.m) / (2*self.m)
         self.Wnb = np.ones((2 * self.m, 2 * self.m)) / (2 * self.m)
         self.Wv = np.outer(np.ones(self.n), self.pi)
@@ -172,11 +175,10 @@ class NBRW():
         Spatial Complexity - O(m^2).
         """
         De = np.zeros((2*self.m, 2*self.m))
-        deg = self.G.degree()
         
         # Extracting the degree of the endpoints of each edge -- assuming G is undirected
-        deg_array = np.array([deg[j] for _, j, _ in self.G.edges()])
-        deg_array_shifted = np.array([deg[i] for i, _, _ in self.G.edges()])  # gets edge (j, i) if edge (i, j) exists
+        deg_array = np.array([self.degree_list[j] for _, j, _ in self.edges_list])
+        deg_array_shifted = np.array([self.degree_list[i] for i, _, _ in self.edges_list])  # gets edge (j, i) if edge (i, j) exists
         
         # Fancy indexing to fill in De array
         De[np.arange(self.m), np.arange(self.m)] = deg_array
@@ -277,8 +279,8 @@ class NBRW():
         Computational Complexity - depends on the np.linalg.solve() function.
         Spatial Complexity - O(m).
         """
-        Gedges = [(g[0], g[1]) for g in self.G.edges()]
-        Gedges.extend([(g[1], g[0]) for g in self.G.edges()])
+        Gedges = [(g[0], g[1]) for g in self.edges_list]
+        Gedges.extend([(g[1], g[0]) for g in self.edges_list])
         
         entries_to_delete = []
 
