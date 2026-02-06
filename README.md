@@ -40,7 +40,8 @@ G = NBRW(g)
 ```python
 from nbrw import extra_graphs as exg
 
-N = exg.necklace(5)                     # necklace graph with 5 beads
-C = exg.cycle_barbell(k=2, a=5, b=6)    # cycle barbell with 2-path, 5-cycle and a 6-cycle
-P = exg.pinwheel([3, 4, 5])             # pinwheel graph with 3 spokes of 3-, 4-, and 5- cycles
+n = exg.necklace(5)                     # necklace graph with 5 beads
+c = exg.cycle_barbell(k=2, a=5, b=6)    # cycle barbell with 2-path, 5-cycle and a 6-cycle
+p = exg.pinwheel([3, 4, 5])             # pinwheel graph with 3 spokes of 3-, 4-, and 5- cycles
+P = NBRW(p, pinwheel=True)
 ```
